@@ -6,7 +6,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://vishnupandey92580:Dy3CTGyfLImJJINe@cluster0.gohfycz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+
+// mongoose.connect("mongodb+srv://vishnupandey92580:Dy3CTGyfLImJJINe@cluster0.gohfycz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://vishnupandey92580:Dy3CTGyfLImJJINe@cluster0.gohfycz.mongodb.net/mobzwayDB?retryWrites=true&w=majority")
   .then(() => console.log("DB connected"))
   .catch((err) => console.log(err));
 
