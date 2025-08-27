@@ -25,7 +25,7 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", UserSchema);
 
-app.post("/api/save", async (req, res) => {
+app.post("/save", async (req, res) => {
   try {
     // Trim all fields
     const firstName = req.body.firstName?.trim();
@@ -90,7 +90,7 @@ app.post("/api/save", async (req, res) => {
 
 
 
-app.get("/api/get", async (req, res) => {
+app.get("/get", async (req, res) => {
   try {
     const allUsers = await User.find({});
     res.json(allUsers);

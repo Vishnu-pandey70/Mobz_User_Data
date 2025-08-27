@@ -30,7 +30,7 @@
     $("#userForm").on("submit", function(e) {
       e.preventDefault();
 
-      $.post("http://localhost:5000/api/save", $(this).serialize())
+      $.post("http://localhost:5000/save", $(this).serialize())
         .done(res => {
           $("#msg").css("color","green").text(res.message);
           this.reset();
